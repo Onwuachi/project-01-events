@@ -11,6 +11,8 @@ describe('MainContent', () => {
     expect(screen.getByRole('button')).toBeInTheDocument();
   });
 
+// This test checks if the button has the correct text. and Derrick is awesome
+
   it('should show the help area after clicking the button', async () => {
     render(<MainContent />);
 
