@@ -12,6 +12,7 @@ describe('MainContent', () => {
   });
 
 // This test checks if the button has the correct text. and Derrick is awesome and you know it
+// Added addtional no needed comment to test the workflow
 
   it('should show the help area after clicking the button', async () => {
     render(<MainContent />);
