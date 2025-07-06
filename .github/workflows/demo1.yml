@@ -1,9 +1,23 @@
 name: Events Demo 1
 on:
   pull_request:
-    types: opened
+    types: [opened]
+    branches:
+      - main          # main
+      - 'dev-*'        # dev-new, dev-this-is-new, dev-feature
+      - 'feat/**'   # feat/feature1, feat/feature2
+      # Developer-1
+      #paths:
+       # - '.github/workflows/demo1.yml' # Only trigger on this workflow file
+    paths-ignore:
+      - '.github/workflows/*' # Ignore workflow files
   workflow_dispatch:
-
+  push: 
+    branches:
+      - main          # main
+      - 'dev-*'        # dev-new, dev-this-is-new, dev-feature
+      - 'feat/**'   # feat/feature1, feat/feature2
+      # Developer-1 
 jobs:
   deploy:
     runs-on: ubuntu-latest
